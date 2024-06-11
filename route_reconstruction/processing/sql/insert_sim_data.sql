@@ -1,0 +1,1 @@
+INSERT INTO sim_tachograph_envirocar (time, speed, track_id) VALUES (%s, %s, %s)

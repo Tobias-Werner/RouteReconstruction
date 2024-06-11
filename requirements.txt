@@ -1,0 +1,11 @@
+requests
+python-dateutil
+geopy
+psycopg2-binary
+python-dotenv
+matplotlib
+scipy
+pandas
+seaborn
+sqlalchemy
+geopandas

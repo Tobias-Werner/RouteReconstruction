@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  postgis:
+    image: route_reconstruction_postgis:1.0
+    build: postgis
+    container_name: route_reconstruction_postgis
+    env_file:
+      - ../.env
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    networks:
+      - route_reconstruction_network
+    volumes:
+      - route_reconstruction_volume:/var/lib/postgresql/data
+    command: -c 'max_connections=200'
+
+networks:
+  route_reconstruction_network:
+    name: "route_reconstruction_network"
+
+volumes:
+  route_reconstruction_volume:
